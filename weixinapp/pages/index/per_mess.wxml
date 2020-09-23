@@ -1,0 +1,20 @@
+<view class="info_block">
+  <navigator class="item">
+    <view class="item_content">
+     <view class="text">我的头像</view>
+    </view>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" ></image>
+  </navigator>
+  <navigator class="item">
+    <view class="item_content">
+     <view class="text">我的昵称</view>
+    </view>
+     <text >{{userInfo.nickName}}</text>
+  </navigator>
+  <navigator class="item">
+    <view class="item_content">
+     <view class="text">我的手机号码</view>
+    </view>
+    <view>{{call}}</view>
+  </navigator>
+</view>

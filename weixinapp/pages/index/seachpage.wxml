@@ -1,0 +1,17 @@
+<!--pages/index/seachpage.wxml-->
+<view>您的搜索为：</view>
+ <view>{{name}}</view>
+ <view>搜索结果为:</view>
+ <view wx:for="{{array5}}" wx:for-item="item"  wx:key="arrayId">
+  <view class="restaurants-list" data-index="{{index}}" bindtap="lookgoods5">
+    <view class="restaurants-info-image">
+      <image src="{{item.shopimg}}" class="restaurants-image" />
+    </view>
+    <view class="restaurants-info">
+      <view class="restaurants-info-name">{{item.shopname}}</view>
+      <view class="restaurants-info-rating">
+        <view class="restaurants-info-comment">{{item.shopadd}}</view>
+      </view>
+    </view>    
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/index/o1.wxml-->
+
+<view class="ncart" hidden="{{iscart2}}">订单为空!快去商城买吧！</view>
+<view hidden="{{isnull2}}"> 
+  <!-- 完成 -->
+    <scroll-view class="scroll" scroll-y="true">
+      <view  class="orderDetails" wx:for="{{orderlist}}" wx:key="">
+        <view class="orderListTitle">
+          <text class="userName">{{item.shopname}} </text>
+
+        </view>
+        <view class="orderListDetails" data-index="{{index}}" bindtap="looklist">
+          <view class="productImg">
+            <image src="{{item.shopimg}}" background-size="cover"></image>
+          </view>
+          <view class="productInfo">
+            <view class="restaurants-info-comment">{{item.ordertime}}</view>
+            <view class="productTitle">数量: {{item.goodnum}}</view>
+            <view class="productNum">合计：￥{{item.ordersum}}</view>
+            <view class="productPrice">当前状态：{{item.orderstate==0?"未完成":item.orderstate==1?"已完成":"已被取消"}}
+            </view>
+          </view>
+        </view>
+        <view class="productCount">
+          <view>
+            <text> 取货码：{{item.ordernum}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    </view>

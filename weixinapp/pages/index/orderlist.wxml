@@ -1,0 +1,48 @@
+<!--pages/index/orderlist.wxml-->
+<!-- 商店信息 -->
+<view bindtap="KuaidiInfo" class="kuaidi">
+<view class="kuaidiIcon">
+<image src="{{orderlist[0].shopimg}}"></image>
+</view>
+<view class="kuaidiInfo">
+<view>
+<text>商店名称：</text><text>{{orderlist[0].shopname}}</text>
+</view>
+<view>
+<text>订单编号：</text><text>{{orderlist[0].orderid}}</text>
+</view>
+<view>
+<text>地址：</text><text>{{orderlist[0].shopadd}}</text>
+</view>
+</view>
+</view>
+<!-- 订单详情 -->
+<view class='list'>
+<block wx:for="{{orderlist}}" wx:key="">
+<view class="list_item">
+    <view class='img'>
+      <image src="{{item.goodimg}}"  mode="scaleToFill"/>
+    </view>
+    <view class='info'>
+      <view class='title'>{{item.goodname}}</view>
+      <view class='price'>￥{{item.goodprice}}</view>
+      <view class='num'>X{{item.goodnum}}</view>
+    </view>
+    <view class='clear'></view>
+</view>
+</block>
+</view>
+
+<view class="orderDetails">
+  <view>总计 ￥<text class="orderNum">{{orderlist[0].ordersum}}</text>
+  <view class='wxSearch-button' bindtap='tocomment' hidden='{{state==0||state==3}}'>
+      <text>去评价</text>
+ </view>
+  <view class='wxSearch-button' bindtap='todel' hidden='{{state==1||state==3}}'>
+      <text>取消订单</text>
+ </view>
+</view>
+</view>
+
+
+

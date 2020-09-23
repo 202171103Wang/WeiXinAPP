@@ -1,0 +1,72 @@
+/* pages/index/orderlist.wxss */
+page{ 
+  background: #fff;
+  }
+.kuaidi{
+height: 200rpx;
+border-top: 1rpx solid #f3f3f3;
+border-bottom: 20rpx solid #f3f3f3;
+}
+
+.kuaidi .kuaidiIcon{ 
+  float: left; 
+  width: 100rpx; 
+  height: 100rpx; 
+  margin: 20rpx 40rpx 0 40rpx;
+}
+.kuaidi .kuaidiIcon image{
+  margin-top:10px;
+  width: 120%; 
+  height: 120%;
+}
+.kuaidi .kuaidiInfo{
+  margin-top:15px;
+  float: left; 
+  font-size: 34rpx;
+}
+.clear{  
+  clear: both;  
+  overflow: hidden;
+  }
+navigator{  
+  display:inline;}
+.list{  
+  margin-top:10px;} 
+.list .list_item{  
+  margin-top:10px;  
+  padding:10px;  
+  height:70px;  
+  border-bottom:2px solid #E8E8E8;}
+.list .list_item .img{  
+    float:left;  
+    width:40%;  
+    height:100%;}
+.list .list_item .img image{   
+  width:80%;   
+  height:80%;}
+.list .list_item .info{ 
+  width:59%;  
+  float:right;  
+  height:90px;  
+  position:relative;} 
+.list .list_item .info .title{  
+  color:#333;  
+  margin-left:10px;  
+  font-size: 15px;} 
+.list .list_item .info .price{  
+  color:#FF2727;  
+  margin-left:10px;  
+  margin-top:10px;  
+  font-size:15px;} 
+.list .list_item .info .num{  
+  position: absolute;  
+  left:0px;  
+  bottom:18px;  
+  color:#747474; 
+  margin-left:10px;  
+  font-size:10px;}
+.orderDetails{
+  margin-top:20px; 
+  margin-left:220px;
+  width:100%;  
+}

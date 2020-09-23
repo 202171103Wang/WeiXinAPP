@@ -1,0 +1,22 @@
+<!--pages/index/shopdetail.wxml-->
+<import src = "orderPage.wxml"/>
+<import src = "commentPage.wxml"/>
+<import src="restaurantPage"/>
+<view class="header">
+    <block wx:for="{{swiperTitle}}" wx:key="">
+      <view class="title {{index==currentPage?'selected':''}}" data-index="{{index}}"
+      bindtap="turnPage">{{item.text}}</view>
+    </block> 
+</view>
+<swiper class="swiper" current="{{currentPage}}"  bindchange="turnTitle">
+    <swiper-item id="orderPage">
+      <template is="orderPage" data="{{type,menuContent,selected,cost,cost1}}"/>
+    </swiper-item>
+    <swiper-item id="commentPage">
+      <template is="commentPage" data="{{commentList}}"/>
+    </swiper-item>
+    <swiper-item id="restaurantPage">
+      <template is="restaurantPage" data="{{shopmess}}"/>
+      </swiper-item>
+  </swiper>
+

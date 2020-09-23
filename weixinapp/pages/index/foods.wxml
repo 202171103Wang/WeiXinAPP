@@ -1,0 +1,106 @@
+<view class="wxSearch-section">
+  <view class="wxSearch-pancel">
+    <input bindinput="wxSearchInput" class="wxSearch-input" placeholder='搜索店名' value='{{name}}'/>
+    <view class="placeholder">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+    </view>
+    <view class='wxSearch-button' bindtap='searchname'>
+      <text>搜索</text>
+    </view>
+  </view>
+</view>
+<!--导航栏-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<!-- banner start-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--筛选-->
+<view class="welfare-container">
+  <view class="restaurants-info">
+    <view class="restaurants-info-name">
+      <text>{{"食堂"}}</text>
+      <text bindtap="mask2Cancel">筛选</text>
+    </view>
+  </view>
+  <view class="mask" hidden="{{mask2Hidden}}">
+    <scroll-view class="filterList" scroll-y="true">
+      <view class="filterList-characteristic-items">
+        <block wx:for="{{placeList}}" wx:key="">
+          <view class="filterList-characteristic-item {{characteristicSelected[index]==true?'characteristic-selected':''}}" catchtap="cSelected" data-index="{{index}}">{{item.text}}</view>
+        </block>
+      </view>
+    </scroll-view>
+    <view class="filterList-footer">
+      <view class="filterList-footer-finish" bindtap="finish">完成 </view>
+    </view>
+  </view>
+  </view>
+<!--商店-->
+ <view hidden="{{hiddenD1}}">
+ <view wx:for="{{array1}}" wx:for-item="item"  wx:key="arrayId">
+  <view class="restaurants-list" data-index="{{index}}" bindtap="lookgoods1">
+    <view class="restaurants-info-image">
+      <image src="{{item.shopimg}}" class="restaurants-image" />
+    </view>
+    <view class="restaurants-info">
+      <view class="restaurants-info-name">{{item.shopname}}</view>
+      <view class="restaurants-info-rating">
+        <view class="restaurants-info-comment">{{item.shopadd}}</view>
+      </view>
+    </view>    
+  </view>
+</view>
+  </view>
+  <!--食堂D2-->
+  <view hidden="{{hiddenD2}}" >
+ <view wx:for="{{array2}}" wx:for-item="item"  wx:key="arrayId">
+  <view class="restaurants-list" data-index="{{index}}" bindtap="lookgoods2">
+    <view class="restaurants-info-image">
+      <image src="{{item.shopimg}}" class="restaurants-image" />
+    </view>
+    <view class="restaurants-info">
+      <view class="restaurants-info-name">{{item.shopname}}</view>
+      <view class="restaurants-info-rating">
+        <view class="restaurants-info-comment">{{item.shopadd}}</view>
+      </view>
+    </view>    
+  </view>
+</view>
+</view>
+<view hidden="{{hiddenB1}}" >
+  <view wx:for="{{array3}}" wx:for-item="item"  wx:key="arrayId">
+  <view class="restaurants-list" data-index="{{index}}" bindtap="lookgoods3">
+    <view class="restaurants-info-image">
+      <image src="{{item.shopimg}}" class="restaurants-image" />
+    </view>
+    <view class="restaurants-info">
+      <view class="restaurants-info-name">{{item.shopname}}</view>
+      <view class="restaurants-info-rating">
+        <view class="restaurants-info-comment">{{item.shopadd}}</view>
+      </view>
+    </view>    
+  </view>
+</view>
+</view>
+<view hidden="{{hiddenB2}}" >
+  <view wx:for="{{array4}}" wx:for-item="item"  wx:key="arrayId">
+  <view class="restaurants-list" data-index="{{index}}" bindtap="lookgoods4">
+    <view class="restaurants-info-image">
+      <image src="{{item.shopimg}}" class="restaurants-image" />
+    </view>
+    <view class="restaurants-info">
+      <view class="restaurants-info-name">{{item.shopname}}</view>
+      <view class="restaurants-info-rating">
+        <view class="restaurants-info-comment">{{item.shopadd}}</view>
+      </view>
+    </view>    
+  </view>
+</view>
+</view>

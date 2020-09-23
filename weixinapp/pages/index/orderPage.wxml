@@ -1,0 +1,46 @@
+<template name="orderPage">
+    <scroll-view class="orderPage-sideBar" 
+    bindscrolltolower="lower" 
+    scroll-y="true">
+      <block wx:for="{{type}}" wx:key="">
+        <view class="menuList">
+          <view class="menu {{index==selected?'selected':''}}" 
+          data-index="{{index}}" 
+          catchtap="turnMenu">{{item}}</view>
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view class="foodList" scroll-y="true">
+      <view class="title">{{type[selected]}}</view>
+      <block wx:for="{{menuContent}}" wx:key="">
+        <view class="food">
+          <image class="img" src="{{item.goodimg}}"></image>
+          <view class="food-info">
+            <view class="name" >
+             <view >{{item.goodname}}</view>
+            </view>
+            <view class="price">￥  {{item.goodprice}}</view>
+          </view>
+          <view class="food-numb">
+            <view class="remove" 
+            bindtap="removeFromTrolley"
+            hidden="{{item.buynum==0}}" 
+            data-index="{{index}}">-</view>
+            <text class="text" 
+            hidden="">{{item.buynum}}</text>
+            <view class="add" 
+            bindtap="addToTrolley" data-index="{{index}}">+</view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="footer {{cost1!=0&&cost!=0?'active':''}}">
+      <view class="howMuch">
+        <view class="img" style="background:{{cost1!=0&&cost!=0?'#FFD161':'#E7E7E7'}};">
+          <image src="/images/trolley.png" style="width:60rpx;height:60rpx;"></image>
+        </view>
+        <view class="cost" hidden="{{cost==0}}">￥{{cost}}</view>
+      </view>
+      <view class="pay" bindtap="go">去购物车</view>  
+    </view>
+</template>

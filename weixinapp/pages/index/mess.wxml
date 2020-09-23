@@ -1,0 +1,17 @@
+  <view class="all">
+<view class="main">
+    <scroll-view scroll-y="true" class="hot-box" style="height:100%">
+      <view  class="orderDetails" wx:for="{{mycommentList}}" wx:key=" ">
+        <view class="orderListTitle">
+          <text class="userName">评价商店：{{item.cshopname}}</text>
+          <text class="orderStatus">{{item.ctime}}</text>
+        </view>
+        <view class="orderListDetails">
+          <view class="productInfo">
+            <view class="productTitle">{{item.cmessage}}</view>
+           </view>
+          </view>
+        </view>
+    </scroll-view>
+</view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/index/comment.wxml-->
+<view class="down">
+<input type="text" name="{{mess}}" placeholder='输入评论内容' bindinput="messagein" class="input-style"/>
+<button bindtap='sendmessage' class="filterList-footer-finish" >评论</button>
+</view>

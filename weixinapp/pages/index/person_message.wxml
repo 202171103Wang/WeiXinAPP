@@ -1,0 +1,36 @@
+<view class="header">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" ></image>
+    <text class="userinfo-nickname" >{{userInfo.nickName}},你好！</text>
+</view>
+<view class="info_block">
+  <navigator class="item" url="per_num">
+      <view class="item_content">
+      <image class="widget_arrow" src="images/icon_my_01.png" mode="asspectFill"></image>
+      <view class="text">绑定手机号</view>
+    </view>
+    <view class="arrow">></view>
+  </navigator>
+  <navigator class="item" url="message_c">
+    <view class="item_content">
+      <image class="widget_arrow" src="images/icon_my_02.png"/>
+      <view class="text">历史订单</view>
+    </view>
+    <view class="arrow">></view>
+  </navigator>
+  <navigator class="item" url="mess">
+    <view class="item_content">
+      <image class="widget_arrow" src="images/icon_my_06.png" />
+      <view class="text">我的评价</view>
+    </view>
+    <view class="arrow">></view>
+  </navigator>
+  <navigator class="item" url="per_mess">
+    <view class="item_content">
+      <image class="widget_arrow" src="images/icon_my_07.png" />
+      <view class="text">个人信息</view>
+    </view>
+    <view class="arrow">></view>
+  </navigator>
+</view>
+
+

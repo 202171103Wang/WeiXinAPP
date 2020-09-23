@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/foods",
+    "pages/index/cart",
+    "pages/index/person_message",
+    "pages/index/shopdetail",
+    "pages/index/message_c",
+    "pages/index/mess",
+    "pages/index/per_num",
+    "pages/index/per_mess",
+    "pages/index/cart1",
+    "pages/index/orderlist",
+    "pages/index/message_co",
+    "pages/index/seachpage",
+    "pages/index/comment"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "线上食堂",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#FFC640"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/foods",
+        "text": "商城",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_active.png"
+      },
+      {
+        "pagePath": "pages/index/cart",
+        "text": "订单",
+        "iconPath": "images/icon_shop_cart.png",
+        "selectedIconPath": "images/icon_shop_cart_active.png"
+      },
+      {
+        "pagePath": "pages/index/person_message",
+        "text": "我",
+        "iconPath": "images/icon_info.png",
+        "selectedIconPath": "images/icon_info_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

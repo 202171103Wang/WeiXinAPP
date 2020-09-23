@@ -1,0 +1,7 @@
+<template name="restaurantPage">
+<view> 商家基本信息如下：</view>
+<view>商家编号：{{shopmess.shopid}}</view>
+<view>商家状态：{{shopmess.state==1?"营业":"未营业"}}</view>
+<view>商家名称：{{shopmess.shopname}}</view>
+<view>商家地址：{{shopmess.shopadd}}</view>
+</template>
