@@ -1,0 +1,55 @@
+.login{
+        position:relative;
+	    background:url(login.jpg) no-repeat 0 0px;
+	    margin:0 auto;
+	    width:1000px;
+	    height:600px;
+       }
+       .content{
+       background:url(login.jpg) no-repeat 0 0px;
+       top:150px;
+       width:400px;
+       height:250px;
+       position:relative;
+       box-shadow:0px 1px 5px 0px rgba(0,1,1,5);
+       border-radius:8px;
+       left:30%;
+       
+       }
+       .frm{
+        position:relative;
+	    line-height:160%;
+	    margin:7px;
+	    top:20px;
+       }
+       .i-label{
+	    position:absolute;
+	    left:0px;
+	    width:80px;
+	    line-height:160%;
+	    text-align:right;
+	    }
+	    .txtuser{
+	    position:relative;
+	    left:95px;
+	    width:100px;
+	    line-height:160%;
+	    }
+	    .txtpwd{
+	    position:relative;
+	    left:95px;
+	    width:100px;
+	    line-height:160%;
+	    }
+	    .txtVcode{
+	    position:relative;
+	    left:95px;
+	    width:50px;
+	    line-height:160%;
+	    }
+	    .Vcode{
+	    position:relative;
+	    left:95px;
+	    width:100px;
+	    line-height:160%;
+	    }
